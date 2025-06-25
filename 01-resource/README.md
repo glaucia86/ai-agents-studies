@@ -12,7 +12,7 @@ What I learned?
     - [x] Introduction
     - [x] [What is an Agent?](./units/unit-01/01-what-is-agents.md)
     - [x] Quick Quiz 1
-    - [ ] What are LLMs?
+    - [ ] [What are LLMs?](./units/unit-01/02-what-are-llms.md)
     - [ ] Messages and Special Tokens
     - [ ] What are Tools?
     - [ ] Quick Quiz 2
