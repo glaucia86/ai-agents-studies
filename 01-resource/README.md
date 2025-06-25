@@ -10,7 +10,8 @@ What I learned?
 
 - [ ] Unit 1. Introduction to Agents
     - [x] Introduction
-    - [ ] [What is an Agent?](./units/unit-01/what-is-agents.md)
+    - [x] [What is an Agent?](./units/unit-01/01-what-is-agents.md)
+    - [x] Quick Quiz 1
     - [ ] What are LLMs?
     - [ ] Messages and Special Tokens
     - [ ] What are Tools?
