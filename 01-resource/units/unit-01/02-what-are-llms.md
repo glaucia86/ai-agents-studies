@@ -125,6 +125,8 @@ callLLM("Qual é a capital da França?")
 
 > **Observação:** Para rodar esse exemplo, basta obter um token gratuito em [GitHub Models](https://github.com/marketplace/models/).
 
+> Você pode verificar o código completo deste exemplo no repositório [hf-llm-example](
+
 ---
 
 ## **LLMs como o cérebro dos Agents**
