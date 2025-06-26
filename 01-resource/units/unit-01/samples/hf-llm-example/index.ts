@@ -11,7 +11,7 @@ async function callLLM(prompt: string): Promise<string> {
     throw new Error('Token de autenticação não encontrado. Verifique a variável de ambiente GROK_GITHUB_MODEL_TOKEN.');
   }
 
-  const endpoint = 'https://models.github.ai/inference';
+  const endpoint = process.env.GROK_GITHUB_MODEL_ENDPOINT||'';
   const modelName = "xai/grok-3-mini";
 
   const client = ModelClient(
