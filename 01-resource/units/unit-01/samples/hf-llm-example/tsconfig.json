@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es2022",                  // Moderno, compatível com Node.js 14+
+    "module": "nodenext", 
+    "moduleResolution": "nodenext",               // Usado em projetos Node.js
+    "esModuleInterop": true,             // Permite 'import fetch from ...'
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,                      // Ativa todas as verificações estritas (recomendado)
+    "skipLibCheck": true,                // Ignora checagem de tipos de dependências
+    "outDir": "dist",                    // Saída dos arquivos compilados
+    "resolveJsonModule": true            // Permite importar arquivos .json
+  },
+  "include": ["*.ts"],
+  "ts-node": {
+    "esm": true
+  }
+}
