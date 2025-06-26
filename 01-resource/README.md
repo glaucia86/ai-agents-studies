@@ -12,8 +12,8 @@ What I learned?
     - [x] Introduction
     - [x] [What is an Agent?](./units/unit-01/01-what-is-agents.md)
     - [x] Quick Quiz 1
-    - [ ] [What are LLMs?](./units/unit-01/02-what-are-llms.md)
-    - [ ] Messages and Special Tokens
+    - [x] [What are LLMs?](./units/unit-01/02-what-are-llms.md)
+    - [ ] [Messages and Special Tokens](./units/unit-01/03-messages-and-special-tokens.md)
     - [ ] What are Tools?
     - [ ] Quick Quiz 2
     - [ ] Understanding AI Agents through the Thought-Action-Observation Loop
