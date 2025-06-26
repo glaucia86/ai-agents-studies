@@ -70,24 +70,56 @@ Você pode rodar localmente (caso tenha hardware suficiente) ou via API em nuvem
 
 ### **Exemplo simples em JavaScript usando API da Hugging Face:**
 
-```js
-const fetch = require('node-fetch');
+```ts
+import ModelClient, { isUnexpected } from '@azure-rest/ai-inference'; 
+import { AzureKeyCredential } from '@azure/core-auth';
+import * as dotenv from 'dotenv';
 
-async function callLLM(prompt) {
-  const response = await fetch('https://api-inference.huggingface.co/models/gpt2', {
-    method: 'POST',
-    headers: {
-      'Authorization': `Bearer SEU_TOKEN_AQUI`,
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({ inputs: prompt })
+dotenv.config();
+
+async function callLLM(prompt: string): Promise<string> {
+  const token = process.env.GROK_GITHUB_MODEL_TOKEN
+
+  if (!token) {
+    throw new Error('Token de autenticação não encontrado. Verifique a variável de ambiente GROK_GITHUB_MODEL_TOKEN.');
+  }
+
+  const endpoint = process.env.GROK_GITHUB_MODEL_ENDPOINT||'';
+  const modelName = "xai/grok-3-mini";
+
+  const client = ModelClient(
+    endpoint,
+    new AzureKeyCredential(token)
+  );
+
+  const response = await client.path("/chat/completions").post({
+    body: {
+      messages: [
+        { role: "system", content: "Sou um assistente de IA treinado para responder perguntas."},
+        { role: "user", content: prompt }
+      ],
+      temperature: 0.7,
+      top_p: 1.0,
+      model: modelName,
+    }
   });
 
-  const data = await response.json();
-  return data[0].generated_text;
+  if (isUnexpected(response)) {
+    throw new Error(`Erro da API: ${JSON.stringify(response.body.error)}`);
+  }
+
+  const content = response.body.choices[0].message?.content;
+
+  if(!content) {
+    throw new Error('Resposta inesperada do modelo: conteúdo vazio.');
+  }
+
+  return content;
 }
 
-callLLM("A capital da França é").then(console.log);
+callLLM("Qual é a capital da França?")
+  .then(response => console.log("Resposta...: ", response))
+  .catch(error => console.error("Erro...: ", error));
 // Esperado: "A capital da França é Paris."
 ```
 
