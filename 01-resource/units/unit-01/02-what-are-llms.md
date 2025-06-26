@@ -123,7 +123,7 @@ callLLM("Qual é a capital da França?")
 // Esperado: "A capital da França é Paris."
 ```
 
-> **Observação:** Para rodar esse exemplo, basta obter um token gratuito em [https://hf.co/settings/tokens](https://hf.co/settings/tokens).
+> **Observação:** Para rodar esse exemplo, basta obter um token gratuito em [GitHub Models](https://github.com/marketplace/models/).
 
 ---
 
