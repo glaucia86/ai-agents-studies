@@ -5,14 +5,14 @@ import * as dotenv from 'dotenv';
 dotenv.config();
 
 async function callLLM(prompt: string): Promise<string> {
-  const token = process.env.GROK_GITHUB_MODEL_TOKEN
+  const token = process.env.OPEN_API_GITHUB_MODEL_TOKEN
 
   if (!token) {
     throw new Error('Token de autenticação não encontrado. Verifique a variável de ambiente GROK_GITHUB_MODEL_TOKEN.');
   }
 
-  const endpoint = process.env.GROK_GITHUB_MODEL_ENDPOINT||'';
-  const modelName = "xai/grok-3-mini";
+  const endpoint = process.env.OPEN_API_GITHUB_MODEL_ENDPOINT ||'';
+  const modelName = "openai/gpt-4o";
 
   const client = ModelClient(
     endpoint,
