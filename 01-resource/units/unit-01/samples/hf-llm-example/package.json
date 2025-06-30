@@ -25,7 +25,8 @@
     "@azure/core-auth": "latest",
     "@azure/core-sse": "latest",
     "dotenv": "^16.5.0",
-    "node-fetch": "^2.7.0"
+    "node-fetch": "^2.7.0",
+    "openai": "^5.8.2"
   },
   "devDependencies": {
     "@types/node-fetch": "^2.6.12",
