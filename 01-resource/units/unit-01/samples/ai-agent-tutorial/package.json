@@ -1,11 +1,11 @@
 {
   "name": "ai-agent-tutorial",
   "version": "1.0.0",
-  "main": "example.js",
+  "main": "src/example.js",
   "scripts": {
     "build": "tsc",
-    "start": "node dist/example.js",
-    "dev": "tsx example.ts",
+    "start": "node dist/src/example.js",
+    "dev": "tsx src/example.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
