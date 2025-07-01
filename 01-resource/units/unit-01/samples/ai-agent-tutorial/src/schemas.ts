@@ -20,7 +20,7 @@ export function zodToOpenAI(schema: z.ZodObject<any>) {
   const required: string[] = [];
 
   for (const [key, value] of Object.entries(shape)) {
-    if (value instanceof z.ZodOptional) {
+    if (value instanceof z.ZodNumber) {
       properties[key] = { type: 'number' };
     } else if (value instanceof z.ZodEnum) {
       properties[key] = { type: 'string', enum: (value as any).options };
