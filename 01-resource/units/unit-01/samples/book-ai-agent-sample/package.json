@@ -1,0 +1,35 @@
+{
+  "name": "book-ai-agent",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node src/agent.ts",
+    "dev": "nodemon --exec ts-node src/agent.ts",
+    "test": "ts-node -e \"require('./src/agent.ts').testBookAgent()\"",
+    "example": "ts-node -e \"require('./src/agent.ts').exemploUso()\""
+  },
+  "keywords": [
+    "huggingface",
+    "llm",
+    "api",
+    "example",
+    "javascript",
+    "typescript"
+  ],
+  "author": "Glaucia Lemos <GitHub: @glaucia86>",
+  "license": "MIT",
+  "description": "A simple example of using Hugging Face LLM API in JavaScript/TypeScript",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "openai": "^5.8.2"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.12",
+    "@types/node-fetch": "^2.6.12",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.20.3"
+  }
+}
