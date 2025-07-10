@@ -20,7 +20,7 @@ async function callLLM(prompt: string): Promise<string> {
 
   const responseLLM = await client.chat.completions.create({
     messages: [
-      { role: 'system', content:'Você é um assistente treinaado para responder perguntas!' },
+      { role: 'system', content:'Você é um assistente treinado para responder perguntas!' },
       { role: 'user', content: prompt  }
     ],
     temperature: 0.7,

@@ -5,10 +5,10 @@
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "start": "ts-node src/agent.ts",
-    "dev": "nodemon --exec ts-node src/agent.ts",
-    "test": "ts-node -e \"require('./src/agent.ts').testBookAgent()\"",
-    "example": "ts-node -e \"require('./src/agent.ts').exemploUso()\""
+    "start": "tsx src/agent.ts",
+    "dev": "tsx watch src/agent.ts",
+    "test": "tsx src/agent.ts",
+    "example": "tsx src/agent.ts"
   },
   "keywords": [
     "huggingface",
