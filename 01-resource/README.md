@@ -15,8 +15,8 @@ What I learned?
     - [x] [What are LLMs?](./units/unit-01/02-what-are-llms.md)
     - [x] [Messages and Special Tokens](./units/unit-01/03-messages-and-special-tokens.md)
     - [x] What are Tools?
-    - [ ] Quick Quiz 2
-    - [ ] Understanding AI Agents through the Thought-Action-Observation Loop
+    - [x] Quick Quiz 2
+    - [x] [Understanding AI Agents through the Thought-Action-Observation Loop](./units/unit-01/05-understanding-react-cycle.md)
     - [ ] Actions, Enabling the Agent to Engage with Its Environment
     - [ ] Observe, Integrating Feedback to Reflect and Adapt
     - [ ] Dummy Agent Library
