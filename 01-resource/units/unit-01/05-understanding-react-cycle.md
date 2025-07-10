@@ -22,11 +22,8 @@ Quando a ação retorna, o agente entra na fase de observação. Pense nele rece
 
 Com a observação em mãos, o agente pensa mais uma vez sobre como apresentar a resposta de forma clara e útil para o usuário. Por fim, ele retorna a resposta, dizendo algo como: “O tempo agora em Nova York está parcialmente nublado, com temperatura de 15°C e umidade de 60%.” Essa etapa conclui um ciclo completo de Thought-Action-Observation, exatamente como ilustrado nas imagens: do prompt à resposta final.
 
----
 
 Esse ciclo, ao ser repetido, permite que o agente seja autônomo, tome decisões com base no ambiente e corrija seu caminho se necessário. Cada passo — do raciocínio à execução e à observação — é registrado, tornando o agente não apenas útil e confiável, mas também transparente e auditável.
-
----
 
 ## **Como implementar esse ciclo em código?**
 
