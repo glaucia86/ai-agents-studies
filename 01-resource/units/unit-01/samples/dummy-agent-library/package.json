@@ -1,0 +1,28 @@
+{
+  "name": "dummy-agent-library",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "nodemon --exec ts-node src/agent.ts",
+    "start": "ts-node src/agent.ts",
+    "build": "tsc",
+    "prod": "node dist/agent.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["ai", "agent", "github-models", "dummy-agent"],
+  "author": "Glaucia Lemos <Twitter: @glaucia_lemos86>",
+  "license": "MIT",
+  "description": "A dummy agent library for demonstration purposes.",
+  "dependencies": {
+    "@huggingface/inference": "^4.6.1",
+    "dotenv": "^17.2.1",
+    "openai": "^5.12.0",
+    "zod": "^4.0.14"
+  },
+  "devDependencies": {
+    "@types/node": "^24.2.0",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  }
+}
