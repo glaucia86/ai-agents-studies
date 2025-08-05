@@ -1,23 +1,32 @@
 {
-  "name": "ai-agent-tutorial",
+  "name": "teste-cloud-walk",
   "version": "1.0.0",
-  "main": "src/example.js",
+  "description": "Quake Log Parser - Teste Cloud Walk",
+  "main": "dist/quake-parser.js",
   "scripts": {
+    "start": "npm run demo",
+    "demo": "ts-node src/demo.ts",
+    "test": "ts-node src/quake-parser.test.ts",
+    "parser": "ts-node src/quake-parser.ts",
     "build": "tsc",
-    "start": "node dist/src/example.js",
-    "dev": "tsx src/example.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:demo": "npm run build && node dist/demo.js",
+    "build:test": "npm run build && node dist/quake-parser.test.js",
+    "dev": "ts-node src/demo.ts",
+    "clean": "rm -rf dist"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "dotenv": "^17.0.0",
-    "openai": "^5.8.2",
-    "zod": "^3.25.67"
-  },
+  "keywords": [
+    "quake",
+    "parser",
+    "log",
+    "typescript",
+    "cloudwalk"
+  ],
+  "author": "Developer",
+  "license": "MIT",
   "devDependencies": {
-    "@types/node": "^24.0.8"
-  }
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {}
 }

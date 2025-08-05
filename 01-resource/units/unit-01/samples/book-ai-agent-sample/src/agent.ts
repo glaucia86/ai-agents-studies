@@ -294,7 +294,7 @@ async function interactiveMode(): Promise<void> {
   const askQuestion = () => {
     rl.question('\n📝 Sua pergunta sobre livros: ', async (input: string) => {
       if (input.toLowerCase() === 'sair') {
-        console.log('👋 Obrigado por usar o Book Agent!');
+        console.log('👋 Obrigado(a) por usar o Book Agent!');
         rl.close();
         return;
       }
